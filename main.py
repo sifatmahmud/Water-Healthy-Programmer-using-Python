@@ -18,7 +18,7 @@ def musicon(file, stopper):
 
 
 c = 0
-while (c < 14):
+while (c < 14):  
     a = time.sleep(2280)
     musicon("DJ.mp3", "drank")
     water_activity = open("water_activity_file.txt", "a")
