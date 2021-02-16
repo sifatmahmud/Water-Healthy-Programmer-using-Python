@@ -4,12 +4,13 @@ import time
 
 
 def musicon(file, stopper):
-    """this function is use to play mp3 file and to stop this mp3 file you have to write the same text which has in the function"""
+    """this function is use to play mp3 file ,
+    and to stop this mp3 file you have to write the same text which has in the function"""
     mixer.init()
     mixer.music.load(file)
     mixer.music.play()
     while True:
-        drank_input = input("type to stop : ")
+        drank_input = input("Type drank to stop : ")
         if drank_input == stopper:
             mixer.music.stop()
             break
@@ -17,11 +18,15 @@ def musicon(file, stopper):
             continue
 
 
-c = 0
-while (c < 14):  
-    a = time.sleep(2280)
+drank_time = datetime.datetime.now()
+
+loop_count = 0
+while loop_count < 14:
+    program_sleeper = time.sleep(2280)
     musicon("DJ.mp3", "drank")
-    water_activity = open("water_activity_file.txt", "a")
-    water_activity.write(f"\n{datetime.datetime.now()} : drank")
-    water_activity.close()
-    c += 1
+    print(f"you have drank water at : {drank_time}")
+    loop_count += 1
+
+water_activity = open("water_activity_file.txt", "a")
+water_activity.write(f"\n{drank_time} : drank")
+water_activity.close()
