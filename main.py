@@ -24,11 +24,11 @@ if __name__ == '__main__':
     while loop_count < 14:
         if loop_count == 0:
             print("( Welcome to the water acitvity, Be good - Be healthy )")
-        program_sleeper = time.sleep(2280)
+        program_sleeper = time.sleep(2)
         musicon("DJ.mp3", "drank")
         print(f"you have drank water at : {drank_time}")
         loop_count += 1
 
-    water_activity = open("water_activity_file.txt", "a")
-    water_activity.write(f"\n{drank_time} : drank")
-    water_activity.close()
+        water_activity = open("water_activity_file.txt", "a")
+        water_activity.write(f"\n{drank_time} : drank")
+        water_activity.close()
