@@ -24,7 +24,7 @@ if __name__ == '__main__':
     while loop_count < 14:
         if loop_count == 0:
             print("( Welcome to the water acitvity, Be good - Be healthy )")
-        program_sleeper = time.sleep(2)
+        program_sleeper = time.sleep(2280)
         musicon("DJ.mp3", "drank")
         print(f"you have drank water at : {drank_time}")
         loop_count += 1
